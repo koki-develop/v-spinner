@@ -40,7 +40,7 @@ import koki_develop.spinner // When installed from VPM
 // import spinner // When installed from GitHub
 
 fn main() {
-	mut spin := spinner.new(spinner.character_sets[0])
+	mut spin := spinner.new(spinner.slash_1)
 
 	spin.start() // Display the spinner
 	time.sleep(3 * time.second)
@@ -62,7 +62,7 @@ import koki_develop.spinner // When installed from VPM
 // import spinner // When installed from GitHub
 
 fn main() {
-	mut spin := spinner.new(spinner.character_sets[0],
+	mut spin := spinner.new(spinner.slash_1,
 		prefix: '[PREFIX] ', // optional
 		suffix: ' starting up...' // optional
 	)
@@ -91,7 +91,7 @@ import time
 import spinner
 
 fn main() {
-	mut spin := spinner.new(spinner.character_sets[0],
+	mut spin := spinner.new(spinner.slash_1,
 		duration: 500 * time.millisecond // Default is 100ms
 	)
 
@@ -115,20 +115,21 @@ Several character sets are provided by v-spinner. For details, please refer to "
 By passing an array of arbitrary strings to the first argument of spinner.new, you can use a custom character set.
 
 ```v
-mut spin := spinner.new(['.', '..', '...'])
+mut spin := spinner.new(['.  ', '.. ', '...'])
 ```
 
 ![](./assets/character_set.gif)
 
 ## Character Sets Provided by v-spinner
 
-Several character sets are provided by v-spinner, and you can use them like `spinner.character_sets[Index]`.
+Several character sets are provided by v-spinner as constants.
 
-Please refer to the following table for a list of character sets provided by v-spinner.
-
-| Index | Character Set |
-| ----- | ------------- |
-| `0`   | `\|/-\`       |
+| Index              | Character Set                                        |
+| ------------------ | ---------------------------------------------------- |
+| `spinner.slash_1`  | `['\|', '/', '-', '\']`                              |
+| `spinner.circle_1` | `['◐', '◓', '◑', '◒']`                               |
+| `spinner.circle_2` | `['◴', '◷', '◶', '◵']`                               |
+| `spinner.dots_1`   | `['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']` |
 
 ## LICENSE
 
