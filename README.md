@@ -88,7 +88,8 @@ You can set the interval at which the spinner characters change using the `durat
 module main
 
 import time
-import spinner
+import koki_develop.spinner // When installed from VPM
+// import spinner // When installed from GitHub
 
 fn main() {
 	mut spin := spinner.new(spinner.slash_1,
