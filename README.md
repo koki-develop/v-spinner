@@ -50,6 +50,18 @@ fn main() {
 
 ![](./assets/basic.gif)
 
+### Customizing the Character Set
+
+Several character sets are provided by v-spinner. For details, please refer to "[Character Sets Provided by v-spinner](#character-sets-provided-by-v-spinner)".
+
+By passing an array of arbitrary strings to the first argument of spinner.new, you can use a custom character set.
+
+```v
+mut spin := spinner.new(['.  ', '.. ', '...'])
+```
+
+![](./assets/character_set.gif)
+
 ### Setting Prefixes and Suffixes
 
 You can customize prefixes and suffixes by setting the `prefix` and `suffix` attributes.
@@ -108,18 +120,6 @@ fn main() {
 ```
 
 ![](./assets/duration.gif)
-
-### Customizing the Character Set
-
-Several character sets are provided by v-spinner. For details, please refer to "[Character Sets Provided by v-spinner](#character-sets-provided-by-v-spinner)".
-
-By passing an array of arbitrary strings to the first argument of spinner.new, you can use a custom character set.
-
-```v
-mut spin := spinner.new(['.  ', '.. ', '...'])
-```
-
-![](./assets/character_set.gif)
 
 ## Character Sets Provided by v-spinner
 
