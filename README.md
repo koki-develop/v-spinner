@@ -78,6 +78,32 @@ fn main() {
 }
 ```
 
+### Setting the Speed
+
+You can set the interval at which the spinner characters change using the `duration`.
+
+```v
+module main
+
+import time
+import spinner
+
+fn main() {
+	mut spin := spinner.new(spinner.character_sets[0],
+		duration: 500 * time.millisecond // Default is 100ms
+	)
+
+	spin.start() // Display the spinner
+	time.sleep(2 * time.second)
+
+	// It's also possible to change in the middle
+	spin.duration = 50 * time.millisecond
+
+	time.sleep(2 * time.second)
+	spin.stop()
+}
+```
+
 ### Customizing the Character Set
 
 Several character sets are provided by v-spinner. For details, please refer to "[Character Sets Provided by v-spinner](#character-sets-provided-by-v-spinner)".
