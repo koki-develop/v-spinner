@@ -2,7 +2,7 @@
 
 🌀 A library for V to display customizable spinners on the command line.
 
-<!-- TODO: demo -->
+![](./assets/demo.gif)
 
 ## Installation
 
@@ -48,7 +48,7 @@ fn main() {
 }
 ```
 
-<!-- TODO: demo -->
+![](./assets/basic.gif)
 
 ### Setting Prefixes and Suffixes
 
@@ -78,6 +78,8 @@ fn main() {
 }
 ```
 
+![](./assets/prefix_suffix.gif)
+
 ### Setting the Speed
 
 You can set the interval at which the spinner characters change using the `duration`.
@@ -104,6 +106,8 @@ fn main() {
 }
 ```
 
+![](./assets/duration.gif)
+
 ### Customizing the Character Set
 
 Several character sets are provided by v-spinner. For details, please refer to "[Character Sets Provided by v-spinner](#character-sets-provided-by-v-spinner)".
@@ -113,6 +117,8 @@ By passing an array of arbitrary strings to the first argument of spinner.new, y
 ```v
 mut spin := spinner.new(['.', '..', '...'])
 ```
+
+![](./assets/character_set.gif)
 
 ## Character Sets Provided by v-spinner
 
